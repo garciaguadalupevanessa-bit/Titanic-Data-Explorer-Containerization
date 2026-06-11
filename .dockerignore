@@ -1,0 +1,8 @@
+venv/
+pycache/
+*.pyc
+*.pyo
+.git/
+.gitignore
+*.zip
+*.md
