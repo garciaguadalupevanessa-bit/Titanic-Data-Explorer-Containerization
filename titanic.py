@@ -34,6 +34,15 @@ if opcion_menu == "Inicio":
     Bienvenido al explorador interactivo del dataset del **RMS Titanic**.  
     Usa el menú lateral izquierdo para navegar entre las secciones.
     """)
+    # --- SECCIÓN PARA LEER Y MOSTRAR EL README ---
+    import os
+    if os.path.exists("README.md"):
+        with open("README.md", "r", encoding="utf-8") as f:
+            readme_content = f.read()
+        
+        # Creamos un desplegable expandible elegante
+        with st.expander("📖 Ver Documentación del Proyecto (README)", expanded=False):
+            st.markdown(readme_content)
     
     st.markdown("---")
     
@@ -130,3 +139,4 @@ elif opcion_menu == "Explorador":
 elif opcion_menu == "Acerca de":
     st.title("ℹ️ Acerca de la investigación")
     st.markdown("Aquí pondremos el contexto histórico y la documentación de las variables.")
+    
